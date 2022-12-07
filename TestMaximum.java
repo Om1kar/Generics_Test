@@ -1,25 +1,26 @@
 package CoreJava;
 
 public class TestMaximum {
-    /*
-    To test which integer is maximum using java generics
-     */
-    public static Integer compareTo(Integer a, Integer b, Integer c) {
-        /*
-        comparing 3 Integers by if-else condition
-        return = Maximum Integer
-         */
-        if (a > b && a > c) {
-            return a;
+    public static Integer compareTo(Integer a,Integer b,Integer c) {
+        if(a > b){
+            if(a > c) {
+                return a;
+            } else {
+                return c;
+            }
+        } else {
+            if(b > c) {
+                return b;
+            } else {
+                return c;
+            }
         }
-        else if (b > a && b > c) {
-            return b;
-        }
-        else return c;
     }
-    public static void main(String[] args) {
-        int testMaximum = compareTo(30,70,50);
-        System.out.println("Maximum Integer among 3 = "+testMaximum);
 
+    public static void main(String[] args) {
+        System.out.println("----!Welcome to Generic Test Maximum!-----");
+        int max=compareTo(100,10,90);
+        System.out.println("Maximum from 3 Integer : "+max);
     }
 }
+
